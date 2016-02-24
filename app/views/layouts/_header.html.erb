@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-8 col-sm-8 col-xs-8">
+    <h2>
+    
+	 <%= image_tag 'logo.png', alt: 'Create Facebook Profile Picture', class: 'img-responsive' %>
+	     Profile Picture Changer
+      <div class="fb-like" data-href="https://www.facebook.com/EApps-743735179103637" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+
+<div align="center"  class="fb-share-button" data-href="http://eapps.xyz" data-layout="box_count"></div>
+	<div align="center" class="fb-send" data-href="http://eapps.xyz"></div>
+    </h2>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-4">
+    <span class="pull-right">
+      <h1>
+        <% if current_user %>
+        <small>
+          <%= current_user[:name] %><br/>
+          <p><%= link_to 'Logout', logout_path, method: :delete %></p>
+        </small>
+        <%= image_tag current_user[:image_url], width: 50, align: 'right' %>
+        <% else %>
+          <small>Hello Guest</small>
+        <% end %>
+      </h1>
+    </span>
+  </div>
+</div>
