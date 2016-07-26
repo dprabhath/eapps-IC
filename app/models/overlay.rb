@@ -1,6 +1,6 @@
 class Overlay
   def self.images
-    %w(IC-1.png IC-2.png IC-3.png IC-4.png)
+    %w(icnew.png IC-1.png IC-2.png IC-3.png IC-4.png)
   end
 
   def self.create_image source, overlay_image, user
